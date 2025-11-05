@@ -12,7 +12,7 @@ public class App {
         System.out.println("¿Blanco y negro o color (b|c)?: ");
         boolean bn = System.console().readLine().toLowerCase().charAt(0)=='b';
         if (min <0 || max < 0){
-            System.out.println("Deve introducir un intervalo correcto positivo donde min <=max");
+            System.out.println("Debe introducir un intervalo correcto positivo donde min <=max");
             return;
         }
         if(min > max ){
@@ -22,7 +22,7 @@ public class App {
         }
         long numero = (long)(Math.floor(Math.random()*(max - min +1)) + min);
         
-        numero = numero*10 +1;
+        numero = numero*10 +1; //añade un 1 al final del numero para que no sea 0
         int digitos = 0;
         int digitoMayor = 0;
         long volteado = 0;
@@ -58,7 +58,6 @@ public class App {
                     System.out.printf(
                         "%s", 
                         (fila==1)?
-                           //no es la ultima?()
                           ((i!=digitoMayor+2)?(i==1)?"╔":"═╦":"═╗"):
                         (fila!=digitos+1)?
                           ((i!=digitoMayor+2)?(i==1)?"╠":"═╬":"═╣"):
@@ -73,7 +72,7 @@ public class App {
                         case 1,2,3,4->RED_BACKGROUND;
                         case 5,6->GREEN_BACKGROUND;
                         case 7,8->BLUE_BACKGROUND;
-                        case 9,10->PURPLE_BACKGROUND;
+                        case 9->PURPLE_BACKGROUND;
                         default->"";
                     }+" "+RESET:" ");
 
