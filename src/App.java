@@ -86,6 +86,13 @@ public class App {
                 System.out.print(" ---");
             System.out.println();
         }
+        else{
+            System.out.print("╚");
+            for(int i = 1; i<=digitoMayor;i++)
+                System.out.print("═╩");
+            System.out.print("═╝");
+            
+        }
         
     }
 }
