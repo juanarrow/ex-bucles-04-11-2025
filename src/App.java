@@ -59,9 +59,7 @@ public class App {
                         "%s", 
                         (fila==1)?
                           ((i!=digitoMayor+2)?(i==1)?"╔":"═╦":"═╗"):
-                        (fila!=digitos+1)?
-                          ((i!=digitoMayor+2)?(i==1)?"╠":"═╬":"═╣"):
-                          ((i!=digitoMayor+2)?(i==1)?"╚":"═╩":"═╝"));
+                          ((i!=digitoMayor+2)?(i==1)?"╠":"═╬":"═╣"));
                     
                 System.out.println("");
                 for(int i = 1; i<=digitoMayor+1;i++){  
@@ -86,13 +84,7 @@ public class App {
         if(bn){
             for(int i = 1; i<=digitoMayor+1;i++)
                 System.out.print(" ---");
-        }
-        else{
-            System.out.print("╚");
-            for(int i = 1; i<=digitoMayor;i++)
-                System.out.print("═╩");
-            System.out.print("═╝");
-            
+            System.out.println();
         }
         
     }
