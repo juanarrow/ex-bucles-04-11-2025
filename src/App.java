@@ -6,9 +6,9 @@ public class App {
     public static final String PURPLE_BACKGROUND = "\033[45m";   
     public static void main(String[] args) throws Exception {
         System.out.println("Introduzca el valor del intervalo mínimo: ");
-        long min = 0;//Long.parseLong(System.console().readLine());
+        long min = Long.parseLong(System.console().readLine());
         System.out.println("Introduzca el valor del intervalo máximo: ");
-        long max = 0;//Long.parseLong(System.console().readLine());
+        long max = Long.parseLong(System.console().readLine());
         System.out.println("¿Blanco y negro o color (b|c)?: ");
         boolean bn = System.console().readLine().toLowerCase().charAt(0)=='b';
         if (min <0 || max < 0){
@@ -21,7 +21,7 @@ public class App {
             max = aux;
         }
         long numero = (long)(Math.floor(Math.random()*(max - min +1)) + min);
-        numero = 12345678987654321L;//12345678987654321001//
+        
         numero = numero*10 +1;
         int digitos = 0;
         int digitoMayor = 0;
